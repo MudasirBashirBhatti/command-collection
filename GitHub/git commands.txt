@@ -1,0 +1,36 @@
+save work for some time
+
+1. git stash -u //this will stash all the changes that are not yet commited
+2. git stash pop //will show the changes back
+
+revert a commit
+1. git reset --soft HEAD~1  //undo last commit and keep changes staged
+2. git reset --mixed HEAD~1 //undo last commit, keep our changes in working directory but unstage them
+3. git reset --hard HEAD~1 //undo last commit, discard all changes from commit includingthe ones in the working directory
+
+create and merge branch
+1. git checkout -b <new-branch-name> //create new branch
+2. git merge <any-branch-name> //will merge new branch with that branch   (publish immediately after creation and merging)
+
+delete a branch
+1. git push origin --delete <branch-name> //delete remote branch
+2. git branch -d <branc-name> //delete a different branch then current (for local branches)
+3. git branch -D <branch-name> //delete a branch which is not merged -D will delete forcefully (for local branches)
+
+kill the active port or windows
+1. netstat -ano | findstr :4001
+2. taskkill /pid 8020 /F 
+
+checkbranches on local and on remote
+1. git ls-remote --heads origin  //this will check branch on remote
+2. git branch // this will give list of available branches on local
+
+Rename branch
+1. git branch -m new-branch-name //this will rename the current active branch locally
+
+		.........remote branch rename........
+1. git branch -m new-branch-name  //this will rename the current active branch locally
+2. git push origin --delete old-branch-name //this will remove the old branch
+3. git push origin new-branch //this will push new branch
+4. git push --set-upstream origin new-branch-name  //This ensures that your local branch is now tracking the remote new-branch-name.
+5. git fetch --all --prune //If other people are working on the same repository, they might still have references to the old branch.
