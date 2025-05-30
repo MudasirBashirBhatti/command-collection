@@ -28,7 +28,7 @@ checkbranches on local and on remote
 Rename branch
 1. git branch -m new-branch-name //this will rename the current active branch locally
 
-		.........remote branch rename........
+		.........remote branch rename ........
 1. git branch -m new-branch-name  //this will rename the current active branch locally
 2. git push origin --delete old-branch-name //this will remove the old branch
 3. git push origin new-branch //this will push new branch
