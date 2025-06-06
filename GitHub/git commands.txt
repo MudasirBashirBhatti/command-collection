@@ -1,3 +1,8 @@
+Basic commands
+1. git status //to check status of the repo
+2. git add -a  //add all new and changed files to staging area
+3. git rm -r [file-name.txt]  // remove file or folder
+
 save work for some time
 
 1. git stash -u //this will stash all the changes that are not yet commited
