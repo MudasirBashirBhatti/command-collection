@@ -42,3 +42,11 @@ Rename branch
 
 Forget Remote branches Refs
 1. git remote prune origin //this will forget all branches on local vs code that are not currently on remote or have been renamed
+
+Creating and Using Tags for Version Control (MVP, Feature-Release)
+1. git tag -a v1.0.0 -m "Initial MVP release" //this will create a pointer or tag on exact commit we use this for version controlling
+	(i). git checkout v1.1.0  //Switches to the code snapshot from version v1.1.0 (tag). Useful for reviewing or testing that specific release 	without changing the current branch.
+ 	(ii). git reset --hard v1.0.0 // Forcefully moves the current branch back to version v1.0.0, deleting all changes and commits made after it. 	⚠️ Destructive – use with caution. 
+2. git tag backup-before-reset //This saves your current state in case you need to restore it later.
+3. git log --oneline v1.0.0..HEAD //Shows the commits that will be removed if you reset to v1.0.0.
+4. git checkout backup-before-reset -or- git reset --hard backup-before-reset //if you regret the reset
